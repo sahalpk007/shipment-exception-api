@@ -6,4 +6,4 @@ import { ExceptionsService } from './exceptions.service.js';
   controllers: [ExceptionsController],
   providers: [ExceptionsService],
 })
-export class ExceptionsModule {}
+export class ExceptionsModule { }

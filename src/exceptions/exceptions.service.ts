@@ -22,8 +22,13 @@ export class ExceptionsService {
     this.records.push(record);
     return { ...record };
   }
-    findAll(): ShipmentException[] {
-    return this.records.map((record) => ({ ...record }));
+
+  findAll(status?: ExceptionStatus): ShipmentException[] {
+    const matchingRecords = status
+      ? this.records.filter((record) => record.status === status)
+      : this.records;
+
+    return matchingRecords.map((record) => ({ ...record }));
   }
 
   resolve(id: string): ShipmentException {

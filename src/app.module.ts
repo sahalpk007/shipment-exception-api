@@ -17,4 +17,4 @@ import { HealthController } from './health.controller.js';
     },
   ],
 })
-export class AppModule {}
+export class AppModule { }
